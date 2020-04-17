@@ -1,0 +1,9 @@
+Unix commands
+pwd - which path am I on
+ls - to view files folders present on the path
+ls la - view all the hidden files on the path
+
+Git Commands
+git init - To initialize the folder wiht git
+git add . - To add all the files and folders to git Staging area from git working area
+git commit - To commit all the files and folders present in the git Staging area to Repository
