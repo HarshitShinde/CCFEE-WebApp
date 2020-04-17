@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6ffb45b9ea.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/table.css">
+    <title>CSS Grid</title>
+</head>
+
+<body>
+    <!-- <input type="checkbox"/> -->
+    <div class="census-create-layout">
+        <!-- <div id="grid"><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></div> -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark flex-sm-row justify-content-between">
+                <a class="navbar-brand" href="home.html" aria-label="Bootstrap"><img src="img/aetna-logo.png"
+                        alt="Aetna Logo" width="200" height="50"></a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav bd-navbar-nav m-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Census
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="census-create.html">New</a>
+                                <a class="dropdown-item" href="census-search.html">Search</a>
+                                <a class="dropdown-item" href="census-recent.html">Recent</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="data.html">Data</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="views.html">View</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="spool.html">Spool</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="help.html">Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="census-details.html">Census Details</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline ml-md-auto">
+                        <input class="form-control m-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light m-2" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <section class="form-section">
+            <div class="section-content mt-3 mb-3">
+                <div class="container-fluid">
+                    <div class="accordion" id="censusAccordion">
+                        <div class="card">
+                            <div class="card-header" id="customerCard">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-block btn-lg" type="button" data-toggle="collapse"
+                                        data-target="#customerCardCollapse" aria-expanded="true"
+                                        aria-controls="customerCardCollapse">
+                                        Customer
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="customerCardCollapse" class="collapse show" aria-labelledby="customerCard"
+                                data-parent="#censusAccordion">
+                                <div class="card-body">
+                                    <form id="customerForm">
+                                        <div class="form-group row">
+                                            <label for="customerName" class="col-sm-2 col-form-label">Customer
+                                                Name</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="customerName">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="prospectNumber" class="col-sm-2 col-form-label">Prospect
+                                                Number</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="prospectNumber">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="dunsNumber" class="col-sm-2 col-form-label">D-U-N-S
+                                                Number</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="dunsNumber">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="sicCode" class="col-sm-2 col-form-label">SIC Code</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="sicCode">
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <button type="submit" class="btn btn-primary">SIC Search...</button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-12">
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="locationCard">
+                                <h2 class="mb-0">
+                                    <button class="btn btn btn-block btn-lg collapsed" type="button"
+                                        data-toggle="collapse" data-target="#locationCardCollapse" aria-expanded="false"
+                                        aria-controls="locationCardCollapse">
+                                        Location
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="locationCardCollapse" class="collapse" aria-labelledby="locationCard"
+                                data-parent="#censusAccordion">
+                                <div class="card-body">
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Address</h5>
+                                            <form id="addressForm">
+                                                <div class="form-group row">
+                                                    <label for="line1" class="col-sm-1 col-form-label">Line
+                                                        1</label>
+                                                    <div class="col-sm-11">
+                                                        <input type="text" class="form-control" id="line1"
+                                                            placeholder="1234 Main St">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="line2" class="col-sm-1 col-form-label">Line
+                                                        2</label>
+                                                    <div class="col-sm-11">
+                                                        <input type="text" class="form-control" id="line1"
+                                                            placeholder="Apartment, studio, or floor">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="city" class="col-sm-1 col-form-label">City</label>
+                                                    <div class="col-sm-4">
+                                                        <input type="text" class="form-control" id="city">
+                                                    </div>
+                                                    <label for="state" class="col-sm-1 col-form-label">State</label>
+                                                    <div class="col-sm-3">
+                                                        <select id="state" class="form-control">
+                                                            <option selected>Choose...</option>
+                                                            <option>...</option>
+                                                        </select>
+                                                    </div>
+                                                    <label for="zip" class="col-sm-1 col-form-label">Zip</label>
+                                                    <div class="col-sm-2">
+                                                        <input type="text" class="form-control" id="zip">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Contact</h5>
+                                            <form id="contactForm">
+                                                <div class="form-group row">
+                                                    <label for="name" class="col-sm-1 col-form-label">Name</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="text" class="form-control" id="name"
+                                                            placeholder="Firstname Lastname">
+                                                    </div>
+                                                    <label for="email" class="col-sm-1 col-form-label">Email</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="email" class="form-control" id="email"
+                                                            placeholder="abc@xyz.com">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="phone" class="col-sm-1 col-form-label">Phone</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="tel" class="form-control" id="phone"
+                                                            placeholder="+1-999-999-9999">
+                                                    </div>
+                                                    <label for="fax" class="col-sm-1 col-form-label">Fax</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="tel" class="form-control" id="fax"
+                                                            placeholder="999-999-9999">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-12">
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="definitionCard">
+                                <h2 class="mb-0">
+                                    <button class="btn btn btn-block btn-lg collapsed" type="button"
+                                        data-toggle="collapse" data-target="#definitionCardCollapse"
+                                        aria-expanded="false" aria-controls="definitionCardCollapse">
+                                        Definition
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="definitionCardCollapse" class="collapse" aria-labelledby="definitionCard"
+                                data-parent="#censusAccordion">
+                                <div class="card-body">
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="form-group row">
+                                                <div class="col-md-6">
+                                                    <label for="censusId" class="col-form-label">Census Name</label>
+                                                    <div class="">
+                                                        <input type="text" class="form-control" id="censusId"
+                                                            value="test_census_1" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="censusName" class="col-form-label">Census Type</label>
+                                                    <div class="check-radio-box-div">
+                                                        <div>
+                                                            <input type="radio" id="memberRadio">
+                                                            <label for="memberRadio"
+                                                                class="col-form-label">Member</label>
+                                                        </div>
+                                                        <div>
+                                                            <input type="radio" id="subscriberRadio">
+                                                            <label for="subscriberRadio"
+                                                                class="col-form-label">Subscriber</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-12">
+                                                    <label for="censusName" class="col-form-label">Medical Census
+                                                        Tier</label>
+                                                    <div class="check-radio-box-div">
+                                                        <div>
+                                                            <input type="checkbox" id="medicalCheck">
+                                                            <label for="medicalCheck"
+                                                                class="col-form-label">Medical</label>
+                                                        </div>
+                                                        <div>
+                                                            <input type="checkbox" id="lifeCheck">
+                                                            <label for="lifeCheck" class="col-form-label">Life</label>
+                                                        </div>
+                                                        <div>
+                                                            <input type="checkbox" id="ltdCheck">
+                                                            <label for="ltdCheck" class="col-form-label">LTD</label>
+                                                        </div>
+                                                        <div>
+                                                            <input type="checkbox" id="stdCheck">
+                                                            <label for="stdCheck" class="col-form-label">STD</label>
+                                                        </div>
+                                                        <div>
+                                                            <input type="checkbox" id="dentalCheck">
+                                                            <label for="dentalCheck"
+                                                                class="col-form-label">Dental</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-6">
+                                                    <label for="censusId" class="col-form-label">Medical Census
+                                                        Tier</label>
+                                                    <div class="check-radio-box-div">
+                                                        <div>
+                                                            <input type="radio" id="radioTwo">
+                                                            <label for="radioTwo" class="col-form-label">2</label>
+                                                        </div>
+                                                        <div>
+                                                            <input type="radio" id="radioThree">
+                                                            <label for="radioThree" class="col-form-label">3</label>
+                                                        </div>
+                                                        <div>
+                                                            <input type="radio" id="radioFour">
+                                                            <label for="radioFour" class="col-form-label">4</label>
+                                                        </div>
+                                                        <div>
+                                                            <input type="radio" id="radioFive">
+                                                            <label for="radioFive" class="col-form-label">5</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="censusId" class="col-form-label">Dental Census
+                                                        Tier</label>
+                                                    <div class="check-radio-box-div">
+                                                        <div>
+                                                            <input type="radio" id="radioTwoDental">
+                                                            <label for="radioTwoDental" class="col-form-label">2</label>
+                                                        </div>
+                                                        <div>
+                                                            <input type="radio" id="radioThreeDental">
+                                                            <label for="radioThreeDental"
+                                                                class="col-form-label">3</label>
+                                                        </div>
+                                                        <div>
+                                                            <input type="radio" id="radioFourDental">
+                                                            <label for="radioFourDental"
+                                                                class="col-form-label">4</label>
+                                                        </div>
+                                                        <div>
+                                                            <input type="radio" id="radioFiveDental">
+                                                            <label for="radioFiveDental"
+                                                                class="col-form-label">5</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-6">
+                                                    <label for="censusId" class="col-form-label">Policy Period</label>
+                                                    <div class="">
+                                                        <input type="text" class="form-control" id="censusId"
+                                                            value="05/01/2020" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="censusName" class="col-form-label">To</label>
+                                                    <div class="">
+                                                        <input type="text" class="form-control" id="censusName"
+                                                            value="04/30/2021" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="form-group row">
+                                                <div class="col-md-6">
+                                                    <label for="censusId" class="col-form-label">Market Segment</label>
+                                                    <div class="">
+                                                        <input type="text" class="form-control" id="censusId"
+                                                            value="200-300 Lives" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="censusName" class="col-form-label">Non-HMO Medical
+                                                        Funding</label>
+                                                    <div class="">
+                                                        <input type="text" class="form-control" id="censusId"
+                                                            value="Conventional(Fully Insured)" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-6">
+                                                    <label for="censusId" class="col-form-label">Headquaters
+                                                        State</label>
+                                                    <div class="">
+                                                        <input type="text" class="form-control" id="censusId"
+                                                            value="Connecticut" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="censusName" class="col-form-label">HMO Medical
+                                                        Funding</label>
+                                                    <div class="">
+                                                        <input type="text" class="form-control" id="censusId"
+                                                            value="Conventional(Fully Insured)" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-6">
+                                                    <label for="censusId" class="col-form-label">Is Employer
+                                                        Contributing 25% or more to Dental Plan</label>
+                                                    <select class="custom-select" disabled>
+                                                        <option>Yes</option>
+                                                        <option>No</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="censusName" class="col-form-label">Dental
+                                                        Funding</label>
+                                                    <div class="">
+                                                        <input type="text" class="form-control" id="censusId"
+                                                            value="Conventional(Fully Insured)" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="form-group row">
+                                                <div class="col-md-6">
+                                                    <label for="censusId" class="col-form-label">Entered</label>
+                                                    <div class="">
+                                                        <input type="text" class="form-control" id="censusId"
+                                                            value="04/03/2020 03:43:49 PM">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="censusName" class="col-form-label">By</label>
+                                                    <div class="">
+                                                        <input type="text" class="form-control" id="censusId"
+                                                            value="N320834">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-6">
+                                                    <label for="censusId" class="col-form-label">Updated</label>
+                                                    <div class="">
+                                                        <input type="text" class="form-control" id="censusId"
+                                                            value="04/03/2020 03:43:49 PM">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="censusName" class="col-form-label">By</label>
+                                                    <div class="">
+                                                        <input type="text" class="form-control" id="censusId"
+                                                            value="N320834">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-6">
+                                                    <label for="censusId" class="col-form-label">Purge Date</label>
+                                                    <div class="">
+                                                        <input type="text" class="form-control" id="censusId" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <label for="censusName" class="col-form-label">Networks and Rating
+                                                        Areas last Updated</label>
+                                                    <div class="">
+                                                        <input type="text" class="form-control" id="censusId"
+                                                            value="02/25/2020 01:26:29 PM" disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <label for="censusName" class="col-form-label">Census ID</label>
+                                                    <div class="">
+                                                        <input type="text" class="form-control" id="censusId"
+                                                            value="N320834" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="censusCard">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn btn-block btn-lg collapsed" type="button"
+                                            data-toggle="collapse" data-target="#censusCardCollapse"
+                                            aria-expanded="false" aria-controls="censusCardCollapse">
+                                            Census
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="censusCardCollapse" class="collapse" aria-labelledby="censusCard"
+                                    data-parent="#censusAccordion">
+                                    <div class="card-body row">
+                                        <div class="col-md-6 pt-1 pb-1">
+                                            <a id="viewButton" class="btn btn-primary btn-block" type="button"
+                                                href="census-details.html">
+                                                View Census
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6  pt-1 pb-1">
+                                            <a id="importButton" class="btn btn-primary btn-block" type="button"
+                                                href="step-one.html">
+                                                Import Census
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="qualificationCard">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-block btn-lg collapsed" type="button"
+                                            data-toggle="collapse" data-target="#qualificationCardCollapse"
+                                            aria-expanded="false" aria-controls="qualificationCardCollapse">
+                                            Qualification
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="qualificationCardCollapse" class="collapse" aria-labelledby="qualificationCard"
+                                    data-parent="#censusAccordion">
+                                    <div class="card-body">
+                                        <div class="card mb-3">
+                                            <div class="card-body">
+                                                <div class="form-group row">
+                                                    <div class="col-md-6">
+                                                        <label for="censusId" class="col-form-label">SGR Determination
+                                                            Completed</label>
+                                                        <div class="">
+                                                            <input type="text" class="form-control" id="censusId"
+                                                                value="No" disabled>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="censusName" class="col-form-label">Effective Date
+                                                            Used</label>
+                                                        <div class="">
+                                                            <input type="text" class="form-control" id="censusName"
+                                                                value="05/01/2020" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-md-6">
+                                                        <label for="censusId" class="col-form-label">Primary Business
+                                                            Location Used</label>
+                                                        <div class="">
+                                                            <input type="text" class="form-control" id="censusId"
+                                                                value="Connecticut" disabled>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="censusName" class="col-form-label">Main Location
+                                                            State</label>
+                                                        <div class="">
+                                                            <input type="text" class="form-control" id="censusName"
+                                                                value="" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-3">
+                                            <div class="card-body">
+                                                <div id="qualificationsTable" class="">
+                                                    <table class="table table-striped table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">Work Location State</th>
+                                                                <th scope="col">Full</th>
+                                                                <th scope="col">Part</th>
+                                                                <th scope="col">Retired</th>
+                                                                <th scope="col">Cobra</th>
+                                                                <th scope="col">Other</th>
+                                                                <th scope="col">Business Accept Code</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-3">
+                                            <div class="card-body">
+                                                <div id="ratingResultTable" class="">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">Rating Type</th>
+                                                                <th scope="col">Dominant State</th>
+                                                                <th scope="col">SGR Applicability</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="td1">HMO Rating</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="td1">Non HMO Rating</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="td1">Federal HIPPA</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="td1">State HIPPA: <br> (Guaranteed Issue)
+                                                                </td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <footer>
+            <div class="">Designed and built with all the love in the world by the Infosys team for Aetna Team.
+                Currently v1.0.0</div>
+            <div>
+                <i class="fab fa-html5 fa-2x"></i>
+                <i class="fab fa-css3-alt fa-2x"></i>
+                <i class="fab fa-bootstrap fa-2x"></i>
+                <i class="fab fa-chrome fa-2x"></i>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

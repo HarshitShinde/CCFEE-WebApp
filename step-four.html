@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6ffb45b9ea.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/table.css">
+    <title>CSS Grid</title>
+</head>
+
+<body>
+    <!-- <input type="checkbox"/> -->
+    <div class="census-wizard-layout">
+        <!-- <div id="grid"><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></div> -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark flex-sm-row justify-content-between">
+                <a class="navbar-brand" href="home.html" aria-label="Bootstrap"><img src="img/aetna-logo.png"
+                        alt="Aetna Logo" width="200" height="50"></a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav bd-navbar-nav m-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Census
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="census-create.html">New</a>
+                                <a class="dropdown-item" href="census-search.html">Search</a>
+                                <a class="dropdown-item" href="census-recent.html">Recent</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="data.html">Data</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="views.html">View</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="spool.html">Spool</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="help.html">Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="census-details.html">Census Details</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline ml-md-auto">
+                        <input class="form-control m-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light m-2" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <section class="section-title">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Step 4 of 5: Resolve Conflicts</h2>
+                </div>
+                <div class="card-body lead">
+                    Please confirm unknown headers.
+                </div>
+            </div>
+        </section>
+        <section class="form-section step-four-grid">
+            <!-- <div id="columnHeadingInputDiv form-inline">
+                <label for="headingInput" class="col-form-label">Heading</label>
+                <input type="text" class="form-control" id="headingInput">
+            </div> -->
+            <div id="columnHeadingInputDiv">
+                <label class="sr-only" for="headingInput">Heading</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="headingInput" placeholder="Heading">
+            </div>
+            <div id="columnHeadingDropdownDiv">
+                <select class="custom-select">
+                    <option selected="">What is it?</option>
+                    <option value="1">Home Zip Code</option>
+                    <option value="2">Work Zip Code</option>
+                    <option value="3">Age</option>
+                    <option value="4">Date Of Birth</option>
+                    <option value="5">Dental Tier</option>
+                    <option value="6">Gender</option>
+                    <option value="7">Salary</option>
+                    <option value="8">Member Type</option>
+                    <option value="9">Previous Carrier</option>
+                </select>
+            </div>
+
+            <div id="columnValueTextAreaDiv">
+                <label for="textArea">Values</label>
+                <textarea rows="15" id="textArea">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum in reprehenderit error earum atque a nostrum nemo! Perferendis unde, quidem corporis adipisci quos beatae eius quis nulla, numquam cupiditate odit?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ut modi quod laudantium perferendis molestias dolorem repellendus a architecto natus cumque, atque odio earum illum quas nisi asperiores ipsam nihil ea dignissimos? Voluptates ad quas facilis possimus dolorem quae officiis exercitationem. Provident mollitia repudiandae dignissimos consequuntur nihil consequatur asperiores expedita ea, corporis eligendi error est eveniet eum harum ex quaerat. Voluptatem expedita itaque suscipit quae fugit autem? Neque suscipit ut delectus perferendis dignissimos soluta, expedita quae similique animi accusantium omnis, sapiente iure quod repellat maiores laborum corporis quaerat sequi consequuntur unde! Dolores voluptas hic sequi vitae? Explicabo eius eligendi adipisci!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci id, amet minus rem corporis repellat aut, suscipit laborum iste accusantium obcaecati molestiae laboriosam quaerat. Sunt exercitationem ea velit debitis atque iste tempora? Libero blanditiis quaerat amet laboriosam, cumque explicabo natus dolorem ducimus distinctio facere debitis repellendus vitae molestias! Rem blanditiis repellendus ex dignissimos ad necessitatibus aspernatur animi temporibus, alias fugiat praesentium odio culpa amet obcaecati consequatur nisi cupiditate dolores asperiores atque reiciendis voluptates incidunt quos ut! Fugiat, excepturi vitae mollitia quisquam doloribus suscipit facere saepe modi provident iste nobis beatae optio obcaecati blanditiis libero et error inventore cum cumque repudiandae? Voluptas a eligendi, doloribus, maiores veniam culpa quas nam nulla ut, tenetur sed praesentium temporibus! Minus officiis error a harum quod hic, autem ab voluptate numquam. Modi debitis quae ipsum totam, architecto enim aliquam sequi voluptatum nulla deserunt eligendi ex, porro, dicta ut nobis minima! Praesentium natus quos in suscipit consectetur recusandae laudantium, sit tempora, error et veniam maiores obcaecati? Tenetur accusantium, odio pariatur atque facilis ab illo sed! Similique ut fugiat modi ducimus voluptates et. Voluptatum cum quae quo eum ab culpa nesciunt, laudantium dignissimos possimus inventore? Eum animi inventore rem, debitis dolorem ea error itaque minima aperiam ducimus doloribus explicabo laudantium doloremque id molestiae molestias tempore maiores. Sunt provident eligendi sequi saepe aut placeat nostrum officia, veniam illo recusandae reprehenderit maxime temporibus odio voluptatibus dolorem corporis nisi, laborum cum similique excepturi impedit, praesentium aperiam perferendis delectus. Fuga quam eos, minima expedita natus perspiciatis illo. Iure qui reprehenderit ex saepe dolor iste amet autem voluptates, nostrum voluptatibus hic eligendi incidunt rem accusantium ut suscipit porro eos fuga sed. Sed voluptatibus saepe labore illum error mollitia, laborum non, ipsam exercitationem perspiciatis facilis repudiandae laboriosam quisquam autem explicabo excepturi magni ipsum ab eos at recusandae quasi odio veniam. Maiores explicabo perferendis animi maxime necessitatibus odio sint. Inventore soluta distinctio veritatis iusto ut blanditiis ex illo quos debitis esse vero temporibus ipsam tempora aperiam, ipsum iure est numquam provident dolor sapiente maxime suscipit, minima rerum necessitatibus! Inventore, culpa porro, exercitationem ratione obcaecati doloribus molestias veniam, commodi consectetur amet sunt cumque! Suscipit sapiente quos maiores aliquam mollitia neque unde ducimus, vero aperiam asperiores nihil, animi dolorum placeat commodi ut, molestias facere laudantium sit repellat fuga ad. Aperiam praesentium impedit, consequatur, quam suscipit, sequi quisquam placeat porro esse eligendi recusandae et corrupti quae ratione pariatur? Ipsum aspernatur, incidunt vero ea similique tempora velit dolores aliquid corporis reprehenderit repudiandae eligendi alias exercitationem, aperiam dolor officia illum esse deleniti. Nulla laudantium a voluptas nesciunt quidem repellendus alias doloribus earum. Eligendi suscipit quae excepturi vero qui explicabo sequi ipsa dolorem deserunt, ipsam, delectus cupiditate libero iste possimus non? Placeat magnam voluptatem, ad reiciendis neque fuga inventore impedit quasi soluta, nostrum, quam earum in maiores accusamus asperiores nulla ullam distinctio? Tenetur, beatae! Quia impedit deserunt et aperiam? Omnis cum expedita, odio consectetur quisquam impedit officia maxime incidunt adipisci, nulla est, voluptates iste soluta asperiores consequatur maiores exercitationem porro culpa sint sequi commodi voluptatum aperiam. Non commodi deserunt dolores, voluptatum repellendus alias laboriosam impedit adipisci officiis repellat incidunt quae quia cupiditate eum dolore obcaecati animi? Qui quas voluptate pariatur obcaecati minus labore, ipsam atque alias dolore perferendis. Consectetur autem aperiam, odit ut, perferendis modi ipsum odio fugit, sunt quasi ipsa porro ea cupiditate totam. Distinctio libero harum temporibus possimus quisquam non ea reprehenderit delectus architecto cum. Non repellendus quod temporibus deleniti minima neque autem molestiae doloribus! Assumenda dolore soluta porro placeat nulla quis dicta atque quae! Sequi doloremque magnam, eos sit veniam maxime molestias odio sint quas nulla architecto deserunt commodi ratione non dolorum modi dicta laboriosam facere nisi repellendus, nam ipsum quibusdam accusantium? Est distinctio quia error corrupti, similique molestiae, vitae quibusdam possimus placeat at natus soluta sint voluptatem quam dignissimos atque, aperiam voluptate eveniet dolores harum? Nesciunt ipsa debitis accusantium fugiat adipisci minus dolorum? Iste commodi omnis sequi rem voluptas pariatur, officiis culpa maxime ipsa aspernatur corrupti dolores incidunt praesentium ratione laboriosam repellat facilis? Soluta illo, facere, necessitatibus sed possimus voluptates placeat hic porro nobis aut quam animi optio nam. At rem sint sed ipsum dolore, exercitationem consequuntur et vitae optio eius recusandae distinctio velit accusamus corporis eveniet possimus dolor repellendus ad temporibus reiciendis id. Error ad cum sapiente sit itaque reprehenderit adipisci labore molestias quaerat corrupti cupiditate ab doloremque soluta voluptatum molestiae et, totam unde impedit magnam voluptas vero? Vero, soluta ipsa. Voluptatum, porro sed fugiat repellat dolore doloribus perspiciatis ipsa possimus facilis delectus veniam in, sequi voluptate omnis ratione exercitationem quibusdam asperiores alias accusantium. Ea rem magnam voluptates culpa ipsum sapiente commodi qui, reiciendis, sunt in soluta sit ut illo. Neque odit eveniet architecto magni eos totam blanditiis reiciendis, eligendi vero possimus aliquam autem nesciunt culpa cumque nam necessitatibus provident inventore pariatur similique, molestias maiores consequatur illo. Iusto alias necessitatibus beatae adipisci? Alias assumenda sapiente eius maiores, nemo omnis voluptatibus animi earum laudantium facilis libero a ex dolores nesciunt repellat quis debitis quaerat enim optio praesentium fuga saepe quo repellendus. Eligendi, adipisci ullam labore beatae ipsum quas provident deleniti dolor distinctio! Eius aliquid non totam enim repudiandae sunt consequuntur reiciendis asperiores iusto accusantium. Tempora vero necessitatibus fugiat perspiciatis, adipisci nam iure a optio repudiandae perferendis! Officiis deserunt doloremque vitae eligendi vero quisquam voluptatem, enim dolore quibusdam odit ipsam eveniet ex sint, dolor placeat architecto praesentium ad at obcaecati pariatur? Impedit, eveniet fuga facere doloremque, a praesentium labore voluptate eum, recusandae libero aut! Dolor corrupti culpa debitis reiciendis, facilis aut animi, a iure, temporibus dolores laudantium error dolorum voluptate itaque deserunt quisquam optio recusandae qui placeat cumque fuga tempore eveniet dolorem at. Totam eius facere consectetur ipsum blanditiis maiores quo? Doloremque, quasi corrupti minus officiis id vero mollitia. Molestias repellat iste hic, qui consequuntur maxime vitae esse dicta minima. Optio velit maiores recusandae consequatur explicabo omnis aliquid atque officiis. Magnam animi non, expedita recusandae quos aperiam quae voluptatum molestias reprehenderit nostrum maiores ducimus quo! Soluta incidunt nam quae, dolores esse dolore aut nobis ex ab omnis, veritatis voluptate at illo delectus voluptatem odio praesentium architecto fugiat?
+                </textarea>
+            </div>
+
+            <div class="check-radio-box-div">
+                <div>
+                    <input type="checkbox" id="ignoreColumn">
+                    <label for="ignoreColumn">Ignore column</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="freeForm">
+                    <label for="freeForm">Free form(text-only)</label>
+                </div>
+            </div>
+
+            <div id="freeFormInputDiv">
+                <label class="sr-only" for="fieldName">Free-Form Field Name</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="fieldName" placeholder="Free-Form Field Name">
+            </div>
+
+            <div id="columnBtnPanel">
+                <div class="card">
+                    <div class="card-body">
+                        <button type="button" class="btn btn-primary btn-block">Prior Column</button>
+                        <button type="button" class="btn btn-primary btn-block">Next Column</button>
+                        <button type="button" class="btn btn-primary btn-block">Translate Code</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="btn-panel">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-3 pt-1 pb-1">
+                            <!-- <button type="button" class="btn btn-primary btn-block">Help</button> -->
+                            <a type="button" class="btn btn-primary btn-block" href="help.html">Help</a>
+                        </div>
+                        <div class="col-sm-3 pt-1 pb-1">
+                            <!-- <button type="button" class="btn btn-primary btn-block">Back</button> -->
+                            <a type="button" class="btn btn-primary btn-block" href="step-three.html">Back</a>
+                        </div>
+                        <div class="col-sm-3 pt-1 pb-1">
+                            <!-- <button type="button" class="btn btn-primary btn-block">Next</button> -->
+                            <a type="button" class="btn btn-primary btn-block" href="step-five.html">Next</a>
+                        </div>
+                        <div class="col-sm-3 pt-1 pb-1">
+                            <!-- <button type="button" class="btn btn-primary btn-block">Cancel</button> -->
+                            <a type="button" class="btn btn-primary btn-block" href="census-create.html">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="">Designed and built with all the love in the world by the Infosys team for Aetna Team.
+                Currently v1.0.0</div>
+            <div>
+                <i class="fab fa-html5 fa-2x"></i>
+                <i class="fab fa-css3-alt fa-2x"></i>
+                <i class="fab fa-bootstrap fa-2x"></i>
+                <i class="fab fa-chrome fa-2x"></i>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

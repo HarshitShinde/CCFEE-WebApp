@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6ffb45b9ea.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/table.css">
+    <title>CSS Grid</title>
+</head>
+
+<body>
+    <!-- <input type="checkbox"/> -->
+    <div class="census-wizard-layout">
+        <!-- <div id="grid"><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></div> -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark flex-sm-row justify-content-between">
+                <a class="navbar-brand" href="home.html" aria-label="Bootstrap"><img src="img/aetna-logo.png"
+                        alt="Aetna Logo" width="200" height="50"></a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav bd-navbar-nav m-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Census
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="census-create.html">New</a>
+                                <a class="dropdown-item" href="census-search.html">Search</a>
+                                <a class="dropdown-item" href="census-recent.html">Recent</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="data.html">Data</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="views.html">View</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="spool.html">Spool</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="help.html">Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="census-details.html">Census Details</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline ml-md-auto">
+                        <input class="form-control m-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light m-2" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <section class="section-title">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Step 5 of 5: Intepreted Data</h2>
+                </div>
+                <div class="card-body lead">
+                    The data has been successfully imported. Please verify the results.
+                </div>
+            </div>
+        </section>
+        <section id="stepFive" class="form-section">
+            <div class="card-deck">
+                <div class="card ml-3 mr-3">
+                    <div class="card-header">
+                        Rows
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <label for="inputRows" class="col-form-label input-label">Input</label>
+                            <div class="numeric-input">
+                                <input type="text" class="form-control" id="inputRows">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="importedRows" class="col-form-label input-label">Imported</label>
+                            <div class="numeric-input">
+                                <input type="text" class="form-control" id="importedRows">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="skippedRows" class="col-form-label input-label">Skipped</label>
+                            <div class="numeric-input">
+                                <input type="text" class="form-control" id="skippedRows">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="blankRows" class="col-form-label input-label">Blank</label>
+                            <div class="numeric-input">
+                                <input type="text" class="form-control" id="blankRows">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="errorRows" class="col-form-label input-label">In Error</label>
+                            <div class="numeric-input">
+                                <input type="text" class="form-control" id="errorRows">
+                            </div>
+                        </div>
+                        <div class="form-group row align-items-center">
+                            <label for="errorCheck" class="col-form-label">Import Rows In Error</label>
+                            <input type="checkbox" value="" id="errorCheck">
+                        </div>
+                    </div>
+                </div>
+                <div class="card ml-3 mr-3 border-0">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            Columns
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label for="inputCol" class="col-form-label input-label">Input</label>
+                                <div>
+                                    <input type="text" class="form-control" id="inputCol">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="importedCol" class="col-form-label input-label">Imported</label>
+                                <div>
+                                    <input type="text" class="form-control" id="importedCol">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Errors
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label for="dataValue" class="col-form-label input-label">Data Value</label>
+                                <div>
+                                    <input type="text" class="form-control" id="dataValue">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="Truncation" class="col-form-label input-label">Truncation</label>
+                                <div>
+                                    <input type="text" class="form-control" id="Truncation">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="Warning" class="col-form-label input-label">Warning</label>
+                                <div>
+                                    <input type="text" class="form-control" id="Warning">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="align-center mb-3">
+                <button class="btn btn-primary">View Result</button>
+            </div>
+        </section>
+
+        <section class="btn-panel">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-3 pt-1 pb-1">
+                            <!-- <button type="button" class="btn btn-primary btn-block">Help</button> -->
+                            <a type="button" class="btn btn-primary btn-block" href="help.html">Help</a>
+                        </div>
+                        <div class="col-sm-3 pt-1 pb-1">    
+                            <!-- <button type="button" class="btn btn-primary btn-block">Back</button> -->
+                            <a type="button" class="btn btn-primary btn-block" href="step-four.html">Back</a>
+                        </div>
+                        <div class="col-sm-3 pt-1 pb-1">
+                            <!-- <button type="button" class="btn btn-primary btn-block">Next</button> -->
+                            <a type="button" class="btn btn-primary btn-block" href="census-details.html">Next</a>
+                        </div>
+                        <div class="col-sm-3 pt-1 pb-1">
+                            <!-- <button type="button" class="btn btn-primary btn-block">Cancel</button> -->
+                            <a type="button" class="btn btn-primary btn-block" href="census-create.html">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="">Designed and built with all the love in the world by the Infosys team for Aetna Team.
+                Currently v1.0.0</div>
+            <div>
+                <i class="fab fa-html5 fa-2x"></i>
+                <i class="fab fa-css3-alt fa-2x"></i>
+                <i class="fab fa-bootstrap fa-2x"></i>
+                <i class="fab fa-chrome fa-2x"></i>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

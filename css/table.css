@@ -1,0 +1,295 @@
+/* @media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  */
+
+/* Medium and above */
+@media 
+only screen and (min-width: 576px) {
+
+	.step-four-grid {
+		grid-template-areas: 
+		"inputs inputs inputs inputs inputs inputs textarea textarea textarea textarea textarea textarea"
+    	"dropdown dropdown dropdown dropdown dropdown dropdown textarea textarea textarea textarea textarea textarea"
+    	"checkbox checkbox checkbox checkbox checkbox checkbox textarea textarea textarea textarea textarea textarea"
+    	"textbox textbox textbox textbox textbox textbox textarea textarea textarea textarea textarea textarea"
+    	"buttons buttons buttons buttons buttons buttons textarea textarea textarea textarea textarea textarea"
+    	"buttons buttons buttons buttons buttons buttons textarea textarea textarea textarea textarea textarea"
+    	"buttons buttons buttons buttons buttons buttons textarea textarea textarea textarea textarea textarea"
+	}
+
+    main {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    #censusTable{
+        max-height: 37rem;
+        overflow: scroll;
+        /* display: inline-block; */
+	}
+	#interpretedDataTable {
+		/* display: inline-block; */
+        height: 25rem;
+        overflow: auto;
+	}
+	#recentCensusTable {
+		height: 25rem;
+        overflow: auto;
+	}
+	#qualificationsTable {
+		overflow: auto;
+	}
+	#ratingResultTable {
+		overflow: auto;
+	}
+    table th {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        background-color: #2a2b2c;
+        color: white;
+        opacity: 0.8;
+    }
+}
+/* Small to Medium screen */
+@media 
+only screen and (max-width: 575px) and (min-width: 385px) {
+
+	.step-four-grid {
+		grid-template-areas: 
+		"inputs inputs inputs inputs inputs inputs inputs inputs inputs inputs inputs inputs"
+    	"dropdown dropdown dropdown dropdown dropdown dropdown dropdown dropdown dropdown dropdown dropdown dropdown"
+    	"checkbox checkbox checkbox checkbox checkbox checkbox checkbox checkbox checkbox checkbox checkbox checkbox"
+    	"textbox textbox textbox textbox textbox textbox textbox textbox textbox textbox textbox textbox"
+    	"textarea textarea textarea textarea textarea textarea textarea textarea textarea textarea textarea textarea"
+    	"textarea textarea textarea textarea textarea textarea textarea textarea textarea textarea textarea textarea"
+    	"buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons"
+    	"buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons"
+	}
+    main {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        border: 2px solid white;
+	}
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+    #collapseIcon {
+        display: none;
+    }
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	/* tr { border: 1px solid #ccc; } */
+	.table-striped td { 
+		/* Behave  like a "row" */
+		/* border: none; */
+		/* border-bottom: 1px solid #eee;  */
+        position: relative;
+        padding-left: 50%; 
+        margin-right: 1em;
+        margin-left: 1em;
+        /* border:hidden */
+	}
+	td:empty {
+		/* background-color: violet; */
+		padding-bottom: 24px;
+		padding-top: 24px;
+	}
+	td::before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+        width: 50%;
+        padding: 5px;
+        border-right: groove;
+        white-space: nowrap;
+        /* background-color: #7d3f98; */
+        /* color: white; */
+	}
+	
+	/*
+	Label the data
+	*/
+
+	#ratingResultTable td:nth-of-type(1):before { content: "Rating Type"; }
+	#ratingResultTable td:nth-of-type(2):before { content: "Dominant State"; }
+	#ratingResultTable td:nth-of-type(3):before { content: "SGR Applicability"; }
+
+	#qualificationsTable td:nth-of-type(1):before { content: "Work Location State"; }
+	#qualificationsTable td:nth-of-type(2):before { content: "Full"; }
+	#qualificationsTable td:nth-of-type(3):before { content: "Part"; }
+	#qualificationsTable td:nth-of-type(4):before { content: "Retired"; }
+	#qualificationsTable td:nth-of-type(5):before { content: "Cobra"; }
+	#qualificationsTable td:nth-of-type(6):before { content: "Other"; }
+	#qualificationsTable td:nth-of-type(7):before { content: "Business Accept Code"; }
+
+	#recentCensusTable td:nth-of-type(1):before { content: "Row"; }
+	#recentCensusTable td:nth-of-type(2):before { content: "Census Name"; }
+	#recentCensusTable td:nth-of-type(3):before { content: "Census Id"; }
+	#recentCensusTable td:nth-of-type(4):before { content: "Updated Date"; }
+	#recentCensusTable td:nth-of-type(5):before { content: "Policy Begin Date"; }
+	#recentCensusTable td:nth-of-type(6):before { content: "In Use By"; }
+
+	#interpretedDataTable td:nth-of-type(1):before { content: "Home Zip"; }
+	#interpretedDataTable td:nth-of-type(2):before { content: "Date of Birth"; }
+	#interpretedDataTable td:nth-of-type(3):before { content: "Gender"; }
+	#interpretedDataTable td:nth-of-type(4):before { content: "Medical Tier"; }
+	#interpretedDataTable td:nth-of-type(5):before { content: "Dental Tier"; }
+
+	#censusTable td:nth-of-type(1):before { content: "Member Type"; }
+	#censusTable td:nth-of-type(2):before { content: "Gender"; }
+	#censusTable td:nth-of-type(3):before { content: "COBRA Continuee"; }
+	#censusTable td:nth-of-type(4):before { content: "Retiree"; }
+	#censusTable td:nth-of-type(5):before { content: "Medical Employment"; }
+
+	#censusTable td:nth-of-type(6):before { content: "Medical Spouse"; }
+	#censusTable td:nth-of-type(7):before { content: "Medical Child Parent"; }
+	#censusTable td:nth-of-type(8):before { content: "Part Time"; }
+	#censusTable td:nth-of-type(9):before { content: "Date of Birth"; }
+	#censusTable td:nth-of-type(10):before { content: "Age"; }
+
+	#censusTable td:nth-of-type(11):before { content: "Marital Status"; }
+	#censusTable td:nth-of-type(12):before { content: "Number of Children"; }
+	#censusTable td:nth-of-type(13):before { content: "Home Zip Code"; }
+	#censusTable td:nth-of-type(14):before { content: "Work Zip Code"; }
+	#censusTable td:nth-of-type(15):before { content: "Medical Tier"; }
+
+	#censusTable td:nth-of-type(16):before { content: "Dental Tier"; }
+	#censusTable td:nth-of-type(17):before { content: "Current Carrier"; }
+	#censusTable td:nth-of-type(18):before { content: "Calculated Annual Income"; }
+	#censusTable td:nth-of-type(19):before { content: "Calculated Age"; }
+	#censusTable td:nth-of-type(20):before { content: "Medical Calculated Rate"; }
+	
+	#censusTable td:nth-of-type(21):before { content: "Calculated Zip Code"; }
+	#censusTable td:nth-of-type(22):before { content: "Rating Details"; }
+	#censusTable td:nth-of-type(23):before { content: "Network Determination"; }
+	#censusTable td:nth-of-type(24):before { content: "Calculated Work Rate"; }
+	#censusTable td:nth-of-type(25):before { content: "Calculated SGR"; }
+	#censusTable td:nth-of-type(26):before { content: "Calculated VGR"; }
+}
+
+/* Very Small Screen to Small screen*/
+@media 
+only screen and (max-width: 384px) {
+	.step-four-grid {
+		grid-template-areas: 
+		"inputs inputs inputs inputs inputs inputs inputs inputs inputs inputs inputs inputs"
+    	"dropdown dropdown dropdown dropdown dropdown dropdown dropdown dropdown dropdown dropdown dropdown dropdown"
+    	"checkbox checkbox checkbox checkbox checkbox checkbox checkbox checkbox checkbox checkbox checkbox checkbox"
+    	"textbox textbox textbox textbox textbox textbox textbox textbox textbox textbox textbox textbox"
+    	"textarea textarea textarea textarea textarea textarea textarea textarea textarea textarea textarea textarea"
+    	"textarea textarea textarea textarea textarea textarea textarea textarea textarea textarea textarea textarea"
+    	"buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons"
+    	"buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons"
+	}
+    main {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        border-top: 2px solid white;
+    }
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+    #collapseIcon {
+        display: none;
+    }
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	/* tr { border: 1px solid #ccc; } */
+	.table-striped td { 
+		/* Behave  like a "row" */
+		/* border: none; */
+		/* border-bottom: 1px solid #eee;  */
+        position: relative;
+		padding-left: 50%; 
+		padding-top: 0;
+		padding-bottom:0;
+        /* margin-right: 2em; */
+		/* border:hidden; */
+		text-align: right;
+	}
+	td:empty {
+		padding-bottom: 12px;
+		padding-top: 12px;
+	}
+	td::before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 0px;
+		left: 0px;
+        width: 50%;
+        padding-left: 6px;
+		white-space: nowrap;
+		text-align: left;
+	}
+	/*
+	Label the data
+	*/
+	#ratingResultTable td:nth-of-type(1):before { content: "Rating Type"; }
+	#ratingResultTable td:nth-of-type(2):before { content: "Dominant State"; }
+	#ratingResultTable td:nth-of-type(3):before { content: "SGR Applicability"; }
+
+	#qualificationsTable td:nth-of-type(1):before { content: "Work Location State"; }
+	#qualificationsTable td:nth-of-type(2):before { content: "Full"; }
+	#qualificationsTable td:nth-of-type(3):before { content: "Part"; }
+	#qualificationsTable td:nth-of-type(4):before { content: "Retired"; }
+	#qualificationsTable td:nth-of-type(5):before { content: "Cobra"; }
+	#qualificationsTable td:nth-of-type(6):before { content: "Other"; }
+	#qualificationsTable td:nth-of-type(7):before { content: "Business Accept Code"; }
+
+	#recentCensusTable td:nth-of-type(1):before { content: "Row"; }
+	#recentCensusTable td:nth-of-type(2):before { content: "Census Name"; }
+	#recentCensusTable td:nth-of-type(3):before { content: "Census Id"; }
+	#recentCensusTable td:nth-of-type(4):before { content: "Updated Date"; }
+	#recentCensusTable td:nth-of-type(5):before { content: "Policy Begin Date"; }
+	#recentCensusTable td:nth-of-type(6):before { content: "In Use By"; }
+
+	#interpretedDataTable td:nth-of-type(1):before { content: "Home Zip"; }
+	#interpretedDataTable td:nth-of-type(2):before { content: "Date of Birth"; }
+	#interpretedDataTable td:nth-of-type(3):before { content: "Gender"; }
+	#interpretedDataTable td:nth-of-type(4):before { content: "Medical Tier"; }
+	#interpretedDataTable td:nth-of-type(5):before { content: "Dental Tier"; }
+
+	#censusTable td:nth-of-type(1):before { content: "Member Type"; }
+	#censusTable td:nth-of-type(2):before { content: "Gender"; }
+	#censusTable td:nth-of-type(3):before { content: "COBRA Continuee"; }
+	#censusTable td:nth-of-type(4):before { content: "Retiree"; }
+	#censusTable td:nth-of-type(5):before { content: "Medical Employment"; }
+
+	#censusTable td:nth-of-type(6):before { content: "Medical Spouse"; }
+	#censusTable td:nth-of-type(7):before { content: "Medical Child Parent"; }
+	#censusTable td:nth-of-type(8):before { content: "Part Time"; }
+	#censusTable td:nth-of-type(9):before { content: "Date of Birth"; }
+	#censusTable td:nth-of-type(10):before { content: "Age"; }
+
+	#censusTable td:nth-of-type(11):before { content: "Marital Status"; }
+	#censusTable td:nth-of-type(12):before { content: "Number of Children"; }
+	#censusTable td:nth-of-type(13):before { content: "Home Zip Code"; }
+	#censusTable td:nth-of-type(14):before { content: "Work Zip Code"; }
+	#censusTable td:nth-of-type(15):before { content: "Medical Tier"; }
+
+	#censusTable td:nth-of-type(16):before { content: "Dental Tier"; }
+	#censusTable td:nth-of-type(17):before { content: "Current Carrier"; }
+	#censusTable td:nth-of-type(18):before { content: "Calculated Annual Income"; }
+	#censusTable td:nth-of-type(19):before { content: "Calculated Age"; }
+	#censusTable td:nth-of-type(20):before { content: "Medical Calculated Rate"; }
+	
+	#censusTable td:nth-of-type(21):before { content: "Calculated Zip Code"; }
+	#censusTable td:nth-of-type(22):before { content: "Rating Details"; }
+	#censusTable td:nth-of-type(23):before { content: "Network Determination"; }
+	#censusTable td:nth-of-type(24):before { content: "Calculated Work Rate"; }
+	#censusTable td:nth-of-type(25):before { content: "Calculated SGR"; }
+	#censusTable td:nth-of-type(26):before { content: "Calculated VGR"; }
+}
