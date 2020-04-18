@@ -10,4 +10,5 @@ git commit - To commit all the files and folders present in the git Staging area
 
 git config --list - Provides the list of configuration item values
 
-Need to test something
+git diff - shows the difference between the files which are present inside the working area and files which are present inside the
+staging area 
