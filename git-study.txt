@@ -3,6 +3,11 @@ pwd - which path am I on
 ls - to view files folders present on the path
 ls la - view all the hidden files on the path
 
+touch file_name.txt - creates a file with file name
+echo "lorem ipsum" > file_name.txt - added test to the file_name
+
+
+
 Git Commands
 git init - To initialize the folder wiht git
 git add . - To add all the files and folders to git Staging area from git working area
@@ -12,3 +17,7 @@ git config --list - Provides the list of configuration item values
 
 git diff - shows the difference between the files which are present inside the working area and files which are present inside the
 staging area 
+
+As a good practice please pull from remote repository using git pull origin branch_name. There may be a scenario where the version of
+branch_name I am working on may be outdated considering multiple other people may have made changes to the same branch in the day.
+Fetch and download all changes which are in the remote to sync with the remote repository.
